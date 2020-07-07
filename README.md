@@ -8,16 +8,17 @@ If you have any questions or run into any stumbling blocks please feel free to
 ![Screenshot of tutorial](/screenshot.png)
 
 ```sh
-# A version of Rust from around the time the tutorial was written.
-rustup override set nightly-2019-01-06
-rustup target add wasm32-unknown-unknown
-
 # You can use any static file server that properly sets the
 # `application/wasm` mime type
 npm install -g http-server
 
 git clone https://github.com/chinedufn/webgl-water-tutorial
 cd webgl-water-tutorial
+
+# A version of Rust from around the time the tutorial was written.
+rustup override set nightly-2019-01-06
+rustup target add wasm32-unknown-unknown
+
 cargo install -f wasm-bindgen-cli --version 0.2.29 # Or download a release binary
 ./build.sh
 
